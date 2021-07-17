@@ -22,7 +22,7 @@ namespace MVC_Unit_Testing_projects
 
         public bool CheckQuantity(int qty)
         {
-            return (qty >= 0 ? true:false);
+            return (qty >= 0 ? true : false);
         }
     }
 }
