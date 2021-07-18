@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <center>
+
+        @using (Html.BeginForm("index", "Home", "post"))
+        {
+            <div>
+                <table>
+                    <tr>
+                        <td>
+                            <input type="text" id="txtQty" name="txtQty" placeholder="Add product quantity." />
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="submit" name="btnSubmit" value="Check Quantity" />
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        }
+    <div>
+        @Html.Raw( ViewBag.result)
+    </div>
+    </center>
+
+</div>
